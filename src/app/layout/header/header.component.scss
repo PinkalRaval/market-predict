@@ -1,0 +1,31 @@
+@import "../../variable.scss";
+
+.top-header {
+  top: 0px;
+  left: 0px;
+  height: 69px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  align-items: center;
+}
+.first-label {
+  margin-bottom: 0;
+}
+.second-header {
+  top: 55px;
+  left: 0px;
+  height: 73px;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  opacity: 1;
+  align-items: center;
+  text-decoration: none;
+}
+a {
+  color: black;
+  font: normal normal normal 20px/24px Calibri;
+}
+.activex {
+  color: $theme-accent;
+  font: normal normal bold 20px/24px Calibri;
+}
