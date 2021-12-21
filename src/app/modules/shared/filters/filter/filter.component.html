@@ -1,1 +1,36 @@
-<p>filter works!</p>
+<div class="common-filter-container">
+  <div class="title-container">
+    <label>Program</label>
+    <button (click)="show()">
+      <div>
+        <label style="font-size: 100%">{{ !collapse ? "+" : "-" }}</label>
+      </div>
+    </button>
+  </div>
+  <ng-container *ngIf="!collapse">
+    <div *ngFor="let select of selectedFilters" class="filter-pill">
+      <label class="pill-label">{{ select }}</label>
+      <ng-container *ngIf="select === 'All' ? '' : 'x'">
+        <button (click)="onRemove(select)">
+          <label>x</label>
+        </button>
+      </ng-container>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="collapse">
+    <input type="text" class="search-box" placeholder="Search the program" />
+    <div class="filter-list-card">
+      <div *ngFor="let filter of filterArray; let i = index">
+        <div (click)="onSelect(filter)">
+          <input
+            type="checkbox"
+            class="checkbox"
+            [checked]="selectedFilters.indexOf(filter) !== -1"
+          />
+          <label>{{ filter }}</label>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<hr class="m-0" />
