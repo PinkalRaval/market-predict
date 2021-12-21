@@ -18,9 +18,14 @@
     </div>
   </ng-container>
   <ng-container *ngIf="collapse">
-    <input type="text" class="search-box" placeholder="Search the program" />
+    <input
+      type="text"
+      class="search-box"
+      placeholder="Search the program"
+      (input)="onSearch($event)"
+    />
     <div class="filter-list-card">
-      <div *ngFor="let filter of filterArray; let i = index">
+      <div *ngFor="let filter of searchArray; let i = index">
         <div (click)="onSelect(filter)">
           <input
             type="checkbox"
