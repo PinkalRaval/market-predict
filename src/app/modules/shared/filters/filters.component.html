@@ -1,2 +1,40 @@
-<p>filters works!</p>
+<div class="main">
+  <div class="sub-main">
+    <label class="lbl-filters">Filters</label>
+    <button class="apply-btn">Apply</button>&nbsp;
+    <button class="clear-btn">Clear</button>
+  </div>
+  <hr class="m-0" />
+  <div class="datepicker-positions">
+    <label class="dateLabel">From Date</label>&nbsp;
+    <label class="dateLabels">To Date</label>
+    <button class="date-btn" (click)="onFromDate()">
+      {{ fromDate | filterDate }}
+    </button>
+    <ng-container *ngIf="fromDates">
+      <ngb-datepicker
+        class="datepicker-position"
+        #dp
+        [(ngModel)]="fromDate"
+        (navigate)="date = $event.next"
+        (dateSelect)="onFromDate()"
+      ></ngb-datepicker> </ng-container
+    >&nbsp;
+    <button class="date-btn" (click)="onToDate()">
+      {{ toDate | filterDate }}
+    </button>
+    <ng-container *ngIf="toDates">
+      <ngb-datepicker
+        class="datepicker-position"
+        #dp
+        [(ngModel)]="toDate"
+        (navigate)="date = $event.next"
+        (dateSelect)="onToDate()"
+      ></ngb-datepicker>
+    </ng-container>
+  </div>
+
+  <hr />
+</div>
+
 <app-filter></app-filter>
