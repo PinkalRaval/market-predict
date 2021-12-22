@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { debounceTime, Observable, OperatorFunction } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonFilterConfig } from '../filters.component';
 
 @Component({
   selector: 'app-filter',
@@ -7,6 +7,7 @@ import { debounceTime, Observable, OperatorFunction } from 'rxjs';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
+  @Input() filter!: CommonFilterConfig;
   filterArray: string[] = ['All', 'test1', 'test2', 'test3', 'test4'];
   collapse = false;
   check = false;

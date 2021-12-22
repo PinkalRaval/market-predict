@@ -1,6 +1,6 @@
 <div class="common-filter-container">
   <div class="title-container">
-    <label>Program</label>
+    <label>{{ filter.name }}</label>
     <button (click)="show()">
       <div>
         <label style="font-size: 100%">{{ !collapse ? "+" : "-" }}</label>
@@ -21,7 +21,7 @@
     <input
       type="text"
       class="search-box"
-      placeholder="Search the program"
+      placeholder="Search the {{ filter.name.toLowerCase() }}"
       (input)="onSearch($event)"
     />
     <div class="filter-list-card">
