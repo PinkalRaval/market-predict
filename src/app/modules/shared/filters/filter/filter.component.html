@@ -3,11 +3,11 @@
     <label>{{ filter.name }}</label>
     <button (click)="show()">
       <div>
-        <label style="font-size: 100%">{{ !collapse ? "+" : "-" }}</label>
+        <label style="font-size: 100%">{{ collapse ? "+" : "-" }}</label>
       </div>
     </button>
   </div>
-  <ng-container *ngIf="!collapse">
+  <ng-container *ngIf="collapse">
     <div *ngFor="let select of selectedFilters" class="filter-pill">
       <label class="pill-label">{{ select }}</label>
       <ng-container *ngIf="select === 'All' ? '' : 'x'">
@@ -17,7 +17,7 @@
       </ng-container>
     </div>
   </ng-container>
-  <ng-container *ngIf="collapse">
+  <ng-container *ngIf="!collapse">
     <input
       type="text"
       class="search-box"

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonFilterConfig } from '../filters.component';
+import { FilterService } from './filter.service';
 
 @Component({
   selector: 'app-filter',
@@ -8,18 +9,36 @@ import { CommonFilterConfig } from '../filters.component';
 })
 export class FilterComponent implements OnInit {
   @Input() filter!: CommonFilterConfig;
-  filterArray: string[] = ['All', 'test1', 'test2', 'test3', 'test4'];
-  collapse = false;
+  filterArray: string[] = [
+    'All',
+    'test1',
+    'test2',
+    'test3',
+    'test4',
+    'test5',
+    'test6',
+    'test7',
+    'test8',
+    'test9',
+  ];
+  collapse = true;
   check = false;
   searchArray: string[] = [];
   selectedFilters: string[] = ['All'];
-  constructor() {}
+  constructor(private filterService: FilterService) {
+    this.filterService.getExpanded().subscribe((filters) => {
+      if (filters != this.filter.type) {
+        this.collapse = true;
+      }
+    });
+  }
   ngOnInit(): void {
     this.searchArray = JSON.parse(JSON.stringify(this.filterArray));
   }
 
   show() {
     this.collapse = !this.collapse;
+    this.filterService.setExapaded(this.filter.type);
     this.searchArray = JSON.parse(JSON.stringify(this.filterArray));
   }
   onSelect(select: string) {
