@@ -10,7 +10,7 @@
   <ng-container *ngIf="collapse">
     <div *ngFor="let select of selectedFilters" class="filter-pill">
       <label class="pill-label">{{ select }}</label>
-      <ng-container *ngIf="select === 'All' ? '' : 'x'">
+      <ng-container *ngIf="select != 'All'">
         <button (click)="onRemove(select)">
           <label>x</label>
         </button>

@@ -110,3 +110,11 @@
   max-width: calc(100% - 33px);
   vertical-align: top;
 }
+hr:not([size]) {
+  height: 1px;
+}
+hr {
+  color: inherit;
+  border-color: currentColor;
+  opacity: 0.25;
+}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { createProgram } from 'typescript';
 import { CommonFilterConfig } from '../shared/filters/filters.component';
 
 @Component({
@@ -14,14 +13,14 @@ export class StateOfSpendingComponent implements OnInit {
 }
 export const SOS_FILTER_CONFIG: CommonFilterConfig[] = [
   {
-    name: 'State',
-    type: 'state',
-    api: 'GetState',
-  },
-  {
     name: 'Program',
     type: 'program',
     api: 'GetProgram',
+  },
+  {
+    name: 'State',
+    type: 'state',
+    api: 'GetState',
   },
   {
     name: 'DMA',

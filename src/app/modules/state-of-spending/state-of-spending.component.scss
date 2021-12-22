@@ -1,0 +1,35 @@
+.sos-container {
+  padding: 17px 10px;
+}
+.sos-header {
+  height: 45px;
+  padding: 0 11px 0 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f5 0 0 no-repeat padding-box;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.sos-label {
+  font: normal normal normal 18px/22px Calibri;
+  padding-top: 10px;
+}
+.sos-header label {
+  color: #373838;
+}
+.sos-header button {
+  width: 82px;
+  height: 30px;
+  background: #e6874e 0 0 no-repeat padding-box;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  font: normal normal normal 18px/22px Calibri;
+}
+.sos-content {
+  display: flex;
+}
+.sos-left-panel {
+  margin-right: 15px;
+}
