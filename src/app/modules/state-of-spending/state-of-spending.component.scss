@@ -38,6 +38,7 @@
 }
 .candidate-cards {
   height: 84px;
+  display: flex;
 }
 .candidate-card {
   width: 125px;
@@ -70,9 +71,10 @@
 }
 .candidate-card-container {
   padding-left: 7px;
-  padding-top: 7px;
+  padding-top: 5px;
   border-radius: 7px;
   display: flex;
+  margin-right: 20px;
 }
 .logo-container {
   // top: 228px;
