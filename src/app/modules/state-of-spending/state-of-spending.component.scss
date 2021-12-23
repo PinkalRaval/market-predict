@@ -33,3 +33,67 @@
 .sos-left-panel {
   margin-right: 15px;
 }
+.sos-report-container {
+  padding-left: 5px;
+}
+.candidate-cards {
+  height: 84px;
+}
+.candidate-card {
+  width: 125px;
+  display: flex;
+}
+.candidate-details {
+  // top: 219px;
+  left: 284px;
+  width: 190px;
+  height: 84px;
+
+  // border-radius: 6px;
+  padding-left: 20px;
+  // opacity: 0.2;
+}
+.candidate-name {
+  margin-bottom: 0;
+  overflow-x: auto;
+  font: normal normal normal 19px/23px Calibri;
+  color: #373838;
+}
+.candidate-detail {
+  margin-bottom: 0;
+  font: normal normal normal 14px/17px Calibri;
+}
+.candidate-detail label {
+  margin-bottom: 0;
+  font: normal normal normal 14px/17px Calibri;
+  padding-right: 5px;
+}
+.candidate-card-container {
+  padding-left: 7px;
+  padding-top: 7px;
+  border-radius: 7px;
+  display: flex;
+}
+.logo-container {
+  // top: 228px;
+  // left: 1704px;
+  width: 23px;
+  height: 23px;
+  background: #407ac5 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 25px;
+  padding-left: 3px;
+  padding-top: 4px;
+  padding-right: 2px;
+}
+.party-indicator {
+  // top: 230px;
+  // left: 1712px;
+  // width: 7px;
+  // height: 15px;
+  text-align: center;
+  font: normal normal bold 13px/15px Calibri;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
